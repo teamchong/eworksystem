@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{url_to_the_site_root}}">TimeOff.Management</a>
+      <a class="navbar-brand" href="{{url_to_the_site_root}}">EWorkSystem</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,9 +24,11 @@
           {{# if logged_user.admin }}
             <li class="hidden-xs"><a href="/users/">Employees</a></li>
           {{/if}}
+          <li><a href="/expense/">Expense</a></li>
           <li class="navbar-form navbar-left">
             <div class="form-group">
               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#book_leave_modal" id="book_time_off_btn">New absence</button>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#new_expense_modal" id="new_expense_btn">New expense</button>
             </div>
           </li>
         {{/if}}

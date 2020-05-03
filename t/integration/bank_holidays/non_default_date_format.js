@@ -14,8 +14,6 @@ const
   company_edit_form_id    = '#company_edit_form';
 
 /*
- * This is a regressiopn for https://github.com/timeoff-management/application/issues/103
- *
  * The scenario:
  *
  *  * create new company with non-default date format

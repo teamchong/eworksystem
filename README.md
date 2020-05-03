@@ -1,9 +1,7 @@
 
-# TimeOff.Management
+# EWorkSystem.com
 
 Web application for managing employee absences.
-
-<a href="https://travis-ci.org/timeoff-management/application"><img align="right" src="https://travis-ci.org/timeoff-management/application.svg?branch=master" alt="Build status" /></a>
 
 ## Features
 
@@ -68,25 +66,25 @@ Optionally allow employees to see the time off information of entire company reg
 
 ## Screenshots
 
-![TimeOff.Management Screenshot](https://raw.githubusercontent.com/timeoff-management/application/master/public/img/readme_screenshot.png)
+![EWorkSystem.com Screenshot](https://raw.githubusercontent.com/teamchong/etasksystem/master/public/img/readme_screenshot.png)
 
 ## Installation
 
 ### Cloud hosting
 
-Visit http://timeoff.management/
+Visit http://etasksystem.com/
 
 Create company account and use cloud based version.
 
 ### Self hosting
 
-Install TimeOff.Management application within your infrastructure:
+Install EWorkSystem.com application within your infrastructure:
 
 (make sure you have Node.js (>=4.0.0) and SQLite installed)
 
 ```bash
-git clone https://github.com/timeoff-management/application.git timeoff-management
-cd timeoff-management
+git clone https://github.com/teamchong/etasksystem.git etasksystem
+cd etasksystem
 npm install
 npm start
 ```
@@ -121,9 +119,4 @@ npm install
 npm run-script db-update
 npm start
 ```
-
-
-## Feedback
-
-Please report any issues or feedback to <a href="https://twitter.com/FreeTimeOffApp">twitter</a> or Email: pavlo at timeoff.management
 

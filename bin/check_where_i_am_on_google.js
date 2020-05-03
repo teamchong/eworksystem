@@ -7,7 +7,7 @@
 var
     optimist = require('optimist').argv,
     search_query    = optimist.query  || 'time off manager',
-    web_site_domain = optimist.domain || 'timeoffmanager.com',
+    web_site_domain = optimist.domain || 'etasksystem.com',
     stop_on_first   = true;
 
 console.log('-----------------------------------');
