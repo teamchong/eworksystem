@@ -1,0 +1,6 @@
+
+{{# each grouped_expenses}}
+  <h2>{{this.year}}</h2>
+  {{> user_expense_requests expenses=this.expenses no_header=1 logged_user=../logged_user}}
+  <div class="main-row_header">&nbsp;</div>
+{{/ each}}
