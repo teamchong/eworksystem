@@ -1,0 +1,107 @@
+
+{{> header }}
+
+<h1>Employee expense</h1>
+
+<div class="row">
+    <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s expense for {{current_year}}</div>
+    <div class="col-md-6">
+    </div>
+</div>
+
+{{> show_flash_messages }}
+
+<div class="row">&nbsp;</div>
+
+<div class="row main-row_header hidden-xs">
+  <div class="col-md-12">Statistics</div>
+</div>
+
+<div class="row">
+
+  <div class="secondary-expense-type-statistics hidden-xs">
+    <dl>
+      <dt>Details</dt>
+      {{~# each supervisors  ~}}
+      <dd>
+        <em>{{# if  @first }} Supervisor: {{ else   }}  &nbsp;   {{/ if  }}</em>
+        <span class="pull-right"><a href="mailto:{{this.email}}">{{ this.full_name }}</a></span>
+      </dd>
+      {{~/ each ~}}
+    </dl>
+  </div>
+
+</div>
+
+<div class="row">
+</div>
+
+<div class="row">
+  <div class="col-xs-2">
+    {{#if show_full_year}}
+    <a class="btn btn-default" href="/expense/?year={{previous_year}}{{#if show_full_year}}&show_full_year=1{{/if}}"><span aria-hidden="true" class="fa fa-chevron-left"></span> {{previous_year}} </a>
+    {{/if}}
+  </div>
+  <div class="col-xs-8 expense-section-caption">
+
+    <strong>{{#if show_full_year}}January - December {{current_year}}{{else}}Upcoming Months{{/if}}</strong>
+    &nbsp;
+
+    {{# unless show_full_year}}
+    <a class="btn btn-default" href="/expense/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
+    {{else}}
+    <a class="btn btn-default" href="/expense/">Less... &nbsp;<span class="fa fa-minus"></span></a>
+    {{/unless}}
+
+
+  </div>
+  <div class="col-xs-2">
+    {{#if show_full_year}}
+    <a class="btn btn-default pull-right" href="/expense/?year={{next_year}}{{#if show_full_year}}&show_full_year=1{{/if}}">{{next_year}} <span aria-hidden="true" class="fa fa-chevron-right"></span></a>
+    {{/if}}
+  </div>
+</div>
+
+<div class="row">&nbsp;</div>
+
+<div class="row clearfix">
+
+    {{# each expense}}
+    <div class="col-md-3 month_container">
+        <table class="expense_month month_{{ this.month }}">
+        <thead>
+        <tr>
+            <td colspan="14">{{#if ../show_full_year}}{{this.month}}{{else}}{{as_date_formatted this.moment 'MMMM, YYYY'}}{{/if}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">M</td>
+            <td colspan="2">T</td>
+            <td colspan="2">W</td>
+            <td colspan="2">T</td>
+            <td colspan="2">F</td>
+            <td colspan="2">S</td>
+            <td colspan="2">S</td>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each this.weeks }}
+        <tr>
+            {{#each this}}
+              {{> expense_cell day = this}}
+            {{/each}}
+        </tr>
+        {{/each}}
+
+        </tbody></table>
+    </div>
+    {{/each}}
+
+</div>
+
+  <div class="row main-row_header">
+    <p class="col-md-12">All my expense in {{current_year}}</p>
+  </div>
+
+  {{> user_expense_requests expenses=current_user.my_expenses }}
+
+{{> footer }}

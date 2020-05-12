@@ -1,6 +1,6 @@
 {{# with expense ~}}
   {{~# if this.get_expense_type_name ~}}{{~ this.get_expense_type_name }} {{/if~}}
-  from {{# with this.get_start_expense_day ~}}
+  from {{# with this.date_start ~}}
     {{~ as_date this.date ~}}
     {{~# if this.is_morning_expense}} (morning){{/if~}}
     {{~# if this.is_afternoon_expense}} (afternoon){{/if~}}
