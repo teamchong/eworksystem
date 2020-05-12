@@ -19,7 +19,7 @@
 
 <div class="row">
 
-  <div class="secondary-expense-type-statistics hidden-xs">
+  <div class="col-md-3 secondary-expense-type-statistics hidden-xs">
     <dl>
       <dt>Details</dt>
       {{~# each supervisors  ~}}
@@ -98,10 +98,14 @@
 
 </div>
 
+{{# unless show_full_year}}
+
   <div class="row main-row_header">
     <p class="col-md-12">All my expense in {{current_year}}</p>
   </div>
 
   {{> user_expense_requests expenses=current_user.my_expenses }}
+
+{{/unless}}
 
 {{> footer }}
