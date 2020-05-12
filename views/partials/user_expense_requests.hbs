@@ -14,7 +14,6 @@
         <tr>
           <th>Dates (from <i class="fa fa-long-arrow-right"></i> to)</th>
           <th>Type</th>
-          <th>Deducted</th>
           <th>Approved by</th>
           <th></th>
           <th><span class="pull-right">Status</span></th>
@@ -25,9 +24,8 @@
       {{# each expenses }}
 
       <tr class="expense-request-row">
-        <td data-tom-expense-dates="1">{{> expense_dates expense=this}}</td>
+        <td data-tom-expense-dates="1">{{~ as_date this.date_start ~}}</td>
         <td>{{ this.expense_type }}{{#if this.is_pended_revoke_expense}}<br>(pended revoke){{/if}}</td>
-        <td>{{ this.get_deducted_days_number }}</td>
         <td class="user-request-table-approver">{{#with this.approver}}{{this.full_name}}{{/with}}</td>
         <td>
           {{# if this.is_approved_expense }}
