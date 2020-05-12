@@ -22,11 +22,7 @@
 
           <div class="form-group">
             <label for="expense_type" class="control-label">Expense type:</label>
-            <select class="form-control" id="expense_type" name="expense_type">
-            {{# each logged_user.company.expense_types}}
-                <option value={{@index}} data-tom="{{this.name}}">{{this.name}}</option>
-            {{/each}}
-            </select>
+            <input class="form-control" id="expense_type" name="expense_type"/>
           </div>
 
           <div class="form-group">

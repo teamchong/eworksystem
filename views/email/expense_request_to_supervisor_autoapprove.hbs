@@ -1,0 +1,11 @@
+New expense was added and auto approved.
+=====
+<p>Hello <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>,</p>
+
+<p><strong>{{#with requester}}{{this.full_name}}{{/with}}</strong> added new expense <strong>{{>expense_request_detail expense=expense }}</strong>.</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>There is no need to approve/reject expenses from {{#with requester}}{{this.full_name}}{{/with}}.</p>
+
+<p>Thanks</p>

@@ -1,0 +1,9 @@
+Expense was revoked
+=====
+<p>Hello <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
+
+<p>Your expense <strong>{{>expense_request_detail expense=expense }}</strong> was successfully revoked.</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>Thanks</p>

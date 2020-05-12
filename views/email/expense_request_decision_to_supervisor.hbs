@@ -1,0 +1,9 @@
+Expense request decision is made
+=====
+<p>Hello <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>,<p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>You just processed {{#if was_pended_revoke}}cancellation of {{/if}}expense request {{>expense_request_detail expense=expense }} for {{#with requester}}{{this.full_name}}{{/with}}: to {{action}}.</p>
+
+<p>Thanks</p>

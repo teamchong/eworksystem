@@ -1,0 +1,9 @@
+Expense request was cancelled
+=====
+<p>Hello <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
+
+<p>Your expense request <strong>{{>expense_request_detail expense=expense }}</strong> was <strong>cancelled</strong>.</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>Thanks</p>

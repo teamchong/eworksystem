@@ -1,0 +1,11 @@
+Revoke expense request
+=====
+<p>Hello {{#with approver }}{{this.full_name}}{{/with}},</p>
+
+<p><strong>{{#with requester}}{{this.full_name}}{{/with}} cancelled</strong> expense request <strong>{{>expense_request_detail expense=expense }}</strong>.</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>Please visit {{> email/link href=(concatenate (get_application_domain) '/requests/') text='Pending requests' }} page to approve or reject pending requests.</p>
+
+<p>Thanks</p>

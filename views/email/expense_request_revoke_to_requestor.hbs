@@ -1,0 +1,11 @@
+Expense request is waiting decision
+=====
+<p>Hello <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
+
+<p>Your expense request <strong>{{>expense_request_detail expense=expense }} cancellation</strong> was sent to <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>.</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>There will be another email upon decision.</p>
+
+<p>Thanks</p>

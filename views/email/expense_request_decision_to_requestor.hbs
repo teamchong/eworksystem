@@ -1,0 +1,9 @@
+Expense request was {{#if_equal action 'approve'}}accepted{{else}}denied{{/if_equal}}
+=====
+<p>Hello <strong>{{#with requester}}{{this.full_name}}{{/with}}</strong>,</p>
+
+{{> email/expense_comments comments=comments }}
+
+<p>{{#with approver }}{{this.full_name}}{{/with}} decided to <strong>{{action}}</strong> your {{#if was_pended_revoke}}cancellation of {{/if}}expense request <strong>{{>expense_request_detail expense=expense }}</strong>.</p>
+
+<p>Thanks</p>

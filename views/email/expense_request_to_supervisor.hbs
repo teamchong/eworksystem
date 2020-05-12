@@ -1,0 +1,13 @@
+New expense request
+=====
+<p>Hello <strong>{{#with approver }}{{this.full_name}}{{/with}}</strong>,</p>
+
+<p><strong>{{#with requester}}{{this.full_name}}{{/with}}</strong> sent new expense request <strong>{{>expense_request_detail expense=expense }}</strong>.</p>
+
+{{> email/expense_comments comments=comments }}
+
+{{> email/requester_allowance requester=requester requesterAllowance=requesterAllowance}}
+
+<p>Please visit {{> email/link href=(concatenate (get_application_domain) '/requests/' ) text='Pending requests'}} page to approve or reject outstanding requests.</p>
+
+<p>Thanks</p>
