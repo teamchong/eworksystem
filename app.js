@@ -123,6 +123,11 @@ app.use(
 );
 
 app.use(
+  '/expense/',
+  require('./lib/route/expense')
+);
+
+app.use(
   '/settings/',
   require('./lib/route/settings')
 );
