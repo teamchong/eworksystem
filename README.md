@@ -1,5 +1,5 @@
 
-# EWorksSystem.com
+# eWorksSystem.com
 
 Web application for managing employee absences.
 
@@ -66,7 +66,7 @@ Optionally allow employees to see the time off information of entire company reg
 
 ## Screenshots
 
-![EWorksSystem.com Screenshot](https://raw.githubusercontent.com/teamchong/etasksystem/master/public/img/readme_screenshot.png)
+![eWorksSystem.com Screenshot](https://raw.githubusercontent.com/teamchong/etasksystem/master/public/img/readme_screenshot.png)
 
 ## Installation
 
@@ -78,7 +78,7 @@ Create company account and use cloud based version.
 
 ### Self hosting
 
-Install EWorksSystem.com application within your infrastructure:
+Install eWorksSystem.com application within your infrastructure:
 
 (make sure you have Node.js (>=4.0.0) and SQLite installed)
 

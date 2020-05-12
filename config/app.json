@@ -1,5 +1,5 @@
 {
-  "allow_create_new_accounts" : true,
+  "allow_create_new_accounts" : false,
   "send_emails"              : false,
   "application_sender_email" : "email@test.com",
   "email_transporter" : {
@@ -12,6 +12,6 @@
   },
   "ga_analytics_on" : false,
   "crypto_secret" : "!2~`HswpPPLa22+=±§sdq qwe,appp qwwokDF_",
-  "application_domain" : "http://app.etasksystem.com",
-  "promotion_website_domain" : "http://etasksystem.com"
+  "application_domain" : "http://eworkssystem.com",
+  "promotion_website_domain" : "http://eworkssystem.com"
 }
